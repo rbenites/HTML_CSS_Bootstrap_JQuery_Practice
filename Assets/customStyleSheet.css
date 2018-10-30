@@ -1,8 +1,12 @@
 .icons {
-  background-color: #3d97ff;
+  background-color: #3d97ff !important;
   margin-top: 50px;
-  border-radius: 0px!important;
+  border-radius: 0px !important;
 }
 .my-icon {
   font-size: 70px;
 }
+
+.navbar{
+  margin-bottom: 0;
+  }

@@ -16,7 +16,22 @@
   margin-top: 50px;
   }
 
+  #services{
+    background-image: url("http://placeimg.com/500/500/tech");
+    height: 350px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+  }
+  #serviceHeader{
+    color: aliceblue;
+  }
+
   .footer{
     margin-top: 10px;
+  }
+
+  .navbar{
+    background-image: linear-gradient(grey, white);
+
   }
 

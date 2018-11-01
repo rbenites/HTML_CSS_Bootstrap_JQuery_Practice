@@ -5,15 +5,23 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>HTML/JQuery/Bootstrap Practice</title>
+    <meta name="description" content="This is my practice HTML/CSS/Bootstrap/Jquery site">
+    <meta name="keywords" content="HTML, JQuery, CSS, Bootstrap, practice">
+    <meta name="author" content="RBen">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <!--Custom Style Sheet-->
     <link rel="stylesheet" type="text/css" media="screen" href="../Assets/customStyleSheet.css" />
 
     <!--BootStrap Css file from CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <!--Animate Css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
 
 </head>
+
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
@@ -42,30 +50,57 @@
         </div>
     </nav>
 
+    <div class="container" id="jqExamples">
+        <div class="row text-center jqExamples">
+
+            <div class="col-sm-6">
+                <h2>Left Column</h2>
+                <div class="jumbotron left">
+                    <button class="btn target" id="target1" disabled>One</button>
+                    <button class="btn target" id="target2">Two</button>
+                    <button class="btn target" id="target3">Three</button>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <h2>Right column</h2>
+                <div class="jumbotron right">
+                    <button class="btn target" id="target4">Four</button>
+                    <button class="btn target" id="target5">Five</button>
+                    <button class="btn target" id="target6">Six</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <!--Intro-->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-12 text-center jumbotron">
-                <h1>Hello World</h1>
-                <hr>
-                <p>Welcome to my page. Take a look around and i hope you like what you see.</p>
-            </div>
-            <div class="col-sm-12" id="about">
-                <div class="col-sm-6">
-                    <img class="img-fluid" src="http://placeimg.com/300/300/animals" alt="image">
+            <article>
+                <div class="col-sm-12 text-center jumbotron">
+                    <h1>Hello World</h1>
+                    <hr>
+                    <p>Welcome to my page. Take a look around and i hope you like what you see.</p>
                 </div>
-                <div class="col-sm-6">
-                    <h2>This is me</h2>
-                    <p>My Name is Roberto Benites. Above is a picture of me. I have worn many hates over the past 20
-                        years. I have been a cashier, copy center employee, Assistant Manager, Marketing manager,
-                        warehouse manager, QA Lead/Manager, Scrum Master, Product Owner.
-                        I have recently started to learn how to do some programming. So far i have learned and am very
-                        comfortable with HTML, CSS, Bootstrap. I am currently working on getting better with
-                        JavaScript, Jquery, Node JS, and React/React Redux.
-                    </p>
-                    <button class="btn-primary">Image Button </button>
+                <div class="col-sm-12" id="about">
+                    <div class="col-sm-6">
+                        <img class="img-fluid" src="http://placeimg.com/300/300/animals" alt="image">
+                    </div>
+                    <div class="col-sm-6">
+                        <h2>This is me</h2>
+                        <p>My Name is Roberto Benites. Above is a picture of me. I have worn many hats over the past 20
+                            years. I have been a cashier, copy center employee, Assistant Manager, Marketing manager,
+                            warehouse manager, QA Lead/Manager, Scrum Master, Product Owner.
+                            I have recently started to learn how to do some programming. So far i have learned and am
+                            very
+                            comfortable with HTML, CSS, Bootstrap. I am currently working on getting better with
+                            JavaScript, Jquery, Node JS, and React/React Redux.
+                        </p>
+                        <button class="btn-primary">Image Button </button>
+                    </div>
                 </div>
-            </div>
+            </article>
         </div>
     </div>
 
@@ -156,15 +191,17 @@
         <div class="col-sm-8 offset-2">
             <h2 class="text-center">Contact Forms in Bootstrap</h2>
             <hr>
-            <form>
+            <form action="https://formspree.io/your@email.com" method="POST">
+
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="text" class="form-control">
+                    <input type="text" name="name" class="form-control" placeholder="Please type your namem here.">
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" class="form-control">
+                    <input type="email" name="_replyTo" class="form-control" placeholder="Please enter your email">
                 </div>
+                <!--
                 <div class="form-group">
                     <label>Password</label>
                     <input type="password" class="form-control">
@@ -175,6 +212,7 @@
                 <div class="form-group">
                     <label><input type="radio">Radio Me</label>
                 </div>
+            -->
                 <button type="button" class="btn btn-info">Submit</button>
             </form>
         </div>
@@ -256,17 +294,17 @@
 
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
-      Launch
+        Launch
     </button>
-    
+
     <!-- Modal -->
     <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
         <div class="modal-dialog modal-sm|lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                     <h4 class="modal-title" id="modelTitleId">Modal title</h4>
                 </div>
                 <div class="modal-body">
@@ -300,10 +338,8 @@
     <script src="../Javascript/script.js"></script>
 
     <!--Jquery CDN-->
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
